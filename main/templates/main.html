@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+	<title>Saylog</title>
+</head>
+<body>
+	<header></header>
+	<div>
+		{% if cur_saying %}
+		<ul>
+			{% for s in cur_saying%}
+				<h3 class="h3">{{s.saying_text}}</h3>
+			{% endfor %}
+		</ul>
+		{% else %}
+			<p>no data</p>
+		{% endif %}
+	</div>
+	<footer></footer>
+</body>
+</html>
